@@ -16,7 +16,12 @@ ADD etc/redis.conf /etc/redis.conf
 # Install redis
 WORKDIR /home/work/apps/redis-4.0.2/
 RUN make
-
+RUN make && make install
 
 # User
 USER root
+
+# Expose ports.
+EXPOSE 6379
+
+CMD ["redis-server","/etc/redis.conf"]
