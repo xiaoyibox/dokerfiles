@@ -13,15 +13,13 @@ RUN mkdir -p /var/log/redis/
 # Copy Redis tar.gz and auto uncompress
 ADD redis-4.0.2.tar.gz /home/work/apps
 ADD etc/redis.conf /etc/redis.conf
-ADD runRedis.sh /home/work/apps/runRedis.sh
-RUN chmod +x /home/work/apps/runRedis.sh
 
 # Install redis
 WORKDIR /home/work/apps/redis-4.0.2/
 RUN make
 RUN make && make install
 
-CMD ["/home/work/apps/runRedis.sh"]
+CMD ["redis-server","/etc/redis.conf","daemon off;"]
 
 # Expose ports.
 EXPOSE 6379
