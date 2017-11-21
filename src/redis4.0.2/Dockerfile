@@ -19,7 +19,7 @@ WORKDIR /home/work/apps/redis-4.0.2/
 RUN make
 RUN make && make install
 
-CMD ["redis-server","/etc/redis.conf","daemon off;"]
+# CMD ["redis-server","/etc/redis.conf"]
 
 # Expose ports.
 EXPOSE 6379
