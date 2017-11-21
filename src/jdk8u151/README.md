@@ -1,6 +1,6 @@
-#
-# JDK-8U151
-#
+### JDK-8U151
+
+~~~
 FROM yi/centos7-ssh
 MAINTAINER Yi.Ma <findlymw@gmail.com>
 RUN yum clean all
@@ -21,3 +21,8 @@ ENV CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 
 # open ports
 EXPOSE 22
+~~~
+
+> jdk path : /usr/local/java/jdk1.8.0_151
+
+
