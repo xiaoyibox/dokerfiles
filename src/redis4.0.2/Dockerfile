@@ -24,4 +24,4 @@ USER root
 # Expose ports.
 EXPOSE 6379
 
-CMD ["redis-server","/etc/redis.conf"]
+# CMD ["redis-server","/etc/redis.conf"]
