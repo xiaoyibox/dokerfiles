@@ -1,7 +1,7 @@
 #
 # Dockerfile for Redis-4.0.2
 #
-FROM yi/centos7-sshd
+FROM yi/centos7-ssh
 MAINTAINER Yi.Ma <findlymw@gmail.com>
 RUN yum clean all
 RUN yum -y update
