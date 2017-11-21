@@ -32,4 +32,4 @@ docker build -t "centos-ssh-tengine/1.0.1" .
 docker run -d -p 3000:22 -p 3001:80 --net=bridge --name tengine --restart=always centos-ssh-tengine/1.0.1
 ~~~
 
-## [注意：] SSH连接前需要先修改Container的root密码
+### [注意：这里使用的是yi/centos7镜像的话，SSH的密码就是root]
