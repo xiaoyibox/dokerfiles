@@ -21,7 +21,7 @@ WORKDIR /home/work/apps/redis-4.0.2/
 RUN make
 RUN make && make install
 
-# CMD ["/usr/bin/supervisor"]
+ CMD ["/usr/bin/supervisord"]
 
 # Expose ports.
 EXPOSE 6379
