@@ -27,6 +27,10 @@ docker build -t "centos-ssh-tengine/1.0.1" .
 
 ### redis4.0.2 stable
 
+##### etc/redis.conf : redis conf file
+
+##### supervisord.conf : start service apps
+
 
 
 
