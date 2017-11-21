@@ -6,7 +6,7 @@ MAINTAINER Yi.Ma <findlymw@gmail.com>
 RUN yum clean all
 RUN yum -y update
 # Install libs
-RUN yum install deltarpm rpm make tar gcc gcc-c++ epel-release supervisor -y
+RUN yum install deltarpm rpm make tar gcc gcc-c++ epel-release -y
 
 RUN mkdir -p /home/work/apps/
 RUN mkdir -p /var/log/redis/
@@ -21,7 +21,7 @@ WORKDIR /home/work/apps/redis-4.0.2/
 RUN make
 RUN make && make install
 
-#CMD ["/usr/bin/supervisord"]
+CMD ["/usr/bin/supervisor"]
 
 # Expose ports.
 EXPOSE 6379
