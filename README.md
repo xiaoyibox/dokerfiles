@@ -14,7 +14,7 @@ EXPOSE 22
 CMD /usr/sbin/sshd -D
 ~~~
 
-### tengine
+### tengine-2.2.1 stable
 ##### Docker build to image
 1. cd in dir e.g. 
 ~~~
@@ -24,6 +24,12 @@ cd ../Nginx-Tengine-2.2.1
 ~~~
 docker build -t "centos-ssh-tengine/1.0.1" .
 ~~~
+
+### redis4.0.2 stable
+
+
+
+
 
 ### RUN Image
 e.g.
