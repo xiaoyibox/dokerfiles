@@ -14,8 +14,8 @@ RUN mkdir -p /usr/local/java/
 WORKDIR /home/work/apps/
 RUN wget --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie;" http://download.oracle.com/otn-pub/java/jdk/8u151-b12/e758a0de34e24606bca991d704f6dcbf/jdk-8u151-linux-x64.tar.gz
 RUN tar -zxvf jdk-8u151-linux-x64.tar.gz
-RUN mv -f jdk-8u151-linux-x64/ /usr/local/java/jdk-8u151-linux-x64
-ENV JAVA_HOME=/usr/local/java/jdk-8u151-linux-x64
+RUN mv -f jdk1.8.0_151/ /usr/local/java/jdk1.8.0_151
+ENV JAVA_HOME=/usr/local/java/jdk1.8.0_151
 ENV PATH=$JAVA_HOME/bin:$PATH
 ENV CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 
