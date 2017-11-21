@@ -9,6 +9,7 @@ RUN yum -y update
 RUN yum install deltarpm rpm make tar gcc gcc-c++ epel-release -y
 
 RUN mkdir -p /home/work/apps/
+RUN mkdir -p /var/log/redis/
 # Copy Redis tar.gz and auto uncompress
 ADD redis-4.0.2.tar.gz /home/work/apps
 ADD etc/redis.conf /etc/redis.conf
