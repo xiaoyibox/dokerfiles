@@ -14,12 +14,14 @@ RUN mkdir -p /var/log/redis/
 ADD redis-4.0.2.tar.gz /home/work/apps
 ADD etc/redis.conf /etc/redis.conf
 
+COPY supervisord.conf /etc/supervisord.conf
+
 # Install redis
 WORKDIR /home/work/apps/redis-4.0.2/
 RUN make
 RUN make && make install
 
-# CMD ["redis-server","/etc/redis.conf"]
+CMD ["/usr/bin/supervisord"]
 
 # Expose ports.
 EXPOSE 6379
