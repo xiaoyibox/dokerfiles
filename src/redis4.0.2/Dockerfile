@@ -13,12 +13,12 @@ RUN mkdir -p /home/work/apps/
 ADD redis-4.0.2.tar.gz /home/work/apps/redis-4.0.2.tar.gz
 ADD etc/redis.conf /etc/redis.conf
 WORKDIR /home/work/apps/
-RUN tar -zxvf ./redis-4.0.2.tar.gz
+#RUN tar -zxvf ./redis-4.0.2.tar.gz
 
 # Install redis
-WORKDIR /home/work/apps/redis-4.0.2/
-RUN make
+#WORKDIR /home/work/apps/redis-4.0.2/
+#RUN make
 
 
 # User
-USER root
+#USER root
