@@ -6,15 +6,14 @@ MAINTAINER Yi.Ma <findlymw@gmail.com>
 RUN yum clean all
 RUN yum -y update
 # Install libs
-RUN yum install deltarpm rpm make tar \
-         gcc gcc-c++ epel-release -y
+RUN yum install deltarpm rpm make tar gcc gcc-c++ epel-release -y
 
 RUN mkdir -p /home/work/apps/
-WORKDIR /home/work/apps/
 # Copy Redis tar.gz
 ADD redis-4.0.2.tar.gz /home/work/apps/redis-4.0.2.tar.gz
 ADD etc/redis.conf /etc/redis.conf
-RUN tar -zxvf /home/work/apps/redis-4.0.2.tar.gz
+WORKDIR /home/work/apps/
+RUN tar -zxvf ./redis-4.0.2.tar.gz
 
 # Install redis
 WORKDIR /home/work/apps/redis-4.0.2/
