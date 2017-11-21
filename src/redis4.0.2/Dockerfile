@@ -20,7 +20,7 @@ RUN make
 RUN make && make install
 
 
-ENTRYPOINT ["redis-server","/etc/redis.conf"]
+#CMD ["redis-server","/etc/redis.conf"]
 
 # Expose ports.
 EXPOSE 6379
