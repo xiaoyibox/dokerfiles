@@ -1,7 +1,7 @@
 #
 # MySQL 5.7
 #
-FROM yi/centos7-jdk8u151
+FROM yi/centos7-ssh
 MAINTAINER Yi.Ma <findlymw@gmail.com>
 
 RUN yum clean all
