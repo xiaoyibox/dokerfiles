@@ -19,7 +19,8 @@ RUN wget https://dev.mysql.com/get/Downloads/MySQL-5.6/mysql-5.6.38-linux-glibc2
 RUN mv mysql-5.6.38-linux-glibc2.12-x86_64.tar.gz /usr/local/mysql-5.6.38-linux-glibc2.12-x86_64.tar.gz
 WORKDIR /usr/local/
 RUN tar xvf mysql-5.6.38-linux-glibc2.12-x86_64.tar.gz
-RUN mv mysql-5.6.38-linux-glibc2.12-x86_64.tar.gz ./mysql
+RUN mv mysql-5.6.38-linux-glibc2.12-x86_64 ./mysql
+RUN rm mysql-5.6.38-linux-glibc2.12-x86_64.tar.gz
 
 WORKDIR /usr/local/mysql
 RUN chown -R mysql:mysql ./
