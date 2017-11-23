@@ -34,7 +34,12 @@ docker build -t "centos-ssh-tengine/1.0.1" .
 
 ### mysql5.6.38
 
+* Path : /usr/local/mysql
 
+* my.cnf : /etc/my.cnf
+
+### Tomcat 7.0.82
+##### path:/usr/local/apache-tomcat-7.0.82
 
 ### RUN Image
 e.g.

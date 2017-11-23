@@ -9,6 +9,7 @@ docker build -t 'yi/centos7-5.6.38'
 mysql info:
 
 * Path : /usr/local/mysql
+
 * my.cnf : /etc/my.cnf
 
 
