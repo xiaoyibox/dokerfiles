@@ -67,6 +67,9 @@ docker build -t "centos-ssh-tengine/1.0.1" .
 ##### path:/usr/local/apache-tomcat-7.0.82
 
 
+### activeMQ5.15.2
+##### ports:8161 & 8162
+##### path:/usr/local/apache-activemq-5.15.2
 
 
 ### zookeeper 3.4.11 stable
