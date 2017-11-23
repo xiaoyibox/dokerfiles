@@ -37,7 +37,7 @@ RUN chkconfig --list mysqld
 
 ENV PATH=$PATH:/usr/local/mysql/bin
 
-ADD etc/my.cnf
+ADD etc/my.cnf /etc/my.cnf
 RUN chown 777 /etc/my.cnf
 
 CMD ["service mysqld start"]
