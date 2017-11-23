@@ -42,5 +42,7 @@ RUN chown 777 /etc/my.cnf
 
 COPY supervisord.conf /etc/supervisord.conf
 
+EXPOSE 3306
+
 CMD ["/usr/bin/supervisord"]
 
