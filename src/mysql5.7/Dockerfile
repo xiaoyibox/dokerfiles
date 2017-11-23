@@ -40,5 +40,7 @@ ENV PATH=$PATH:/usr/local/mysql/bin
 ADD etc/my.cnf /etc/my.cnf
 RUN chown 777 /etc/my.cnf
 
-CMD ["service mysqld start"]
+COPY supervisord.conf /etc/supervisord.conf
+
+CMD ["/usr/bin/supervisord"]
 
