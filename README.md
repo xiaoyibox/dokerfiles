@@ -1,4 +1,29 @@
 # Dokerfiles
+
+### 使用顺序
+1 centos7 FROM centos : docker build -t 'yi/centos7-ssh' .
+
+2 jdk8u151 FROM yi/centos7-ssh : docker build -t 'yi/centos7-jdk8u151' .
+
+3 Nginx-Tengine-2.2.1 FROM yi/centos7-ssh : docker build -t 'yi/centos7-ssh-tengine' .
+
+4 redis4.0.2 FROM yi/centos7-ssh : docker build -t 'yi/centos7-redis' .
+
+5 mysql5.6 FROM yi/centos7-ssh : docker build -t 'yi/centos7-mysql5.6.38' .
+
+6 tomcat7 FROM yi/centos7-jdk8u151 : docker build -t 'yi/centos7-tomcat7' .
+
+7 zookeeper FROM yi/centos7-ssh : docker build -t 'yi/centos7-zookeeper' .
+
+
+
+#### Create ALL Images
+~~~
+#Create image of all.
+
+~~~
+
+
 ### centos7-ssh
 ~~~
 FROM centos
@@ -40,6 +65,17 @@ docker build -t "centos-ssh-tengine/1.0.1" .
 
 ### Tomcat 7.0.82
 ##### path:/usr/local/apache-tomcat-7.0.82
+
+
+
+
+### zookeeper 3.4.11 stable
+##### Dependyce JDK8
+
+
+
+
+
 
 ### RUN Image
 e.g.

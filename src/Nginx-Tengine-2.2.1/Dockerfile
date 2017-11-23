@@ -3,7 +3,7 @@
 #
 
 #Pull and From base image
-FROM yi/centos7-sshd
+FROM yi/centos7-ssh
 
 MAINTAINER Yi.Ma <findlymw@gmail.com>
 RUN yum clean all
