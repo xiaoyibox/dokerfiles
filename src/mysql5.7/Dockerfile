@@ -7,7 +7,7 @@ MAINTAINER Yi.Ma <findlymw@gmail.com>
 RUN yum clean all
 RUN yum -y update
 # Install libs
-RUN yum install libaio numactl autoconf -y
+RUN yum install libaio numactl autoconf wget tar gcc gcc-c++ -y
 
 RUN mkdir -p /home/work/apps/
 RUN mkdir -p /var/lib/mysql/
