@@ -22,7 +22,7 @@ RUN tar xvf mysql-5.6.38-linux-glibc2.12-x86_64.tar.gz
 RUN mv mysql-5.6.38-linux-glibc2.12-x86_64 ./mysql
 RUN rm mysql-5.6.38-linux-glibc2.12-x86_64.tar.gz
 
-WORKDIR /usr/local/mysql
+WORKDIR /usr/local/mysql/
 RUN chown -R mysql:mysql ./
 
 RUN ./scripts/mysql_install_db --user=mysql --basedir=/usr/local/mysql/ --datadir=/usr/local/mysql/data/
