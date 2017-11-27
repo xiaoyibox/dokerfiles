@@ -2,6 +2,7 @@
 # ----------------------------------
 #Run Env10
 ### 10 is Ip . e.g. 192.168.10.1
+### Run Env ...
 # ----------------------------------
 echo 'Runing 192.168.10.1 ...'
 echo 'Destroy all Containers'
@@ -23,6 +24,14 @@ docker rm env10_6_Mq01
 echo 'Desory env10_7_Mycat01'
 docker rm env10_7_Mycat01
 docker rm env10_7_Mycat01
+
+echo 'Desory env10_201_confluence'
+docker rm env10_201_confluence
+docker rm env10_201_confluence
+
+echo 'Desory env10_202_jira'
+docker rm env10_202_jira
+docker rm env10_202_jira
 echo '==================================================='
 echo 'Remove docker network bridge env10'
 docker network rm env10
@@ -40,6 +49,11 @@ echo 'Run env10_6_Mq01'
 docker run -d --net=env10 --ip=192.168.10.6 --restart=always --name env10_6_Mq01 yi/centos7-activemq5.15.2
 echo 'Run env10_7_Mycat01'
 docker run -d --net=env10 --ip=192.168.10.7 --restart=always --name env10_7_Mycat01 yi/centos7-mycat1.6
+
+echo 'Run env10_201_confluence'
+docker run -d --net=env10 --ip=192.168.10.201 --restart=always --name env10_201_confluence yi/centos7-confluence
+echo 'Run env10_202_jira'
+docker run -d --net=env10 --ip=192.168.10.202 --restart=always --name env10_202_jira yi/centos7-jira
 
 
 echo 'over ^_^'
