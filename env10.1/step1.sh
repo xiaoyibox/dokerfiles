@@ -21,6 +21,7 @@ docker build -t 'yi/centos7-redis' ../src/redis4.0.2/
 
 echo '5. Tengine FROM yi/centos7-ssh ...'
 docker build -t 'yi/centos7-ssh-tengine' ../src/Nginx-Tengine-2.2.1/
+docker build -t 'yi/centos7-ssh-tengine-local' ../src/Nginx-Tengine-2.2.1/local.com/
 
 echo '6. mysql5.6 FROM yi/centos7-ssh ...'
 docker build -t 'yi/centos7-mysql5.6.38' ../src/mysql5.6/
