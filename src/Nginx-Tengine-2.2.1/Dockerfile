@@ -29,9 +29,6 @@ RUN echo 'daemon off;' >> /usr/local/nginx/conf/nginx.conf
 RUN echo 'master_process off;' >> /usr/local/nginx/conf/nginx.conf
 RUN echo 'error_log logs/error.log;' >> /usr/local/nginx/conf/nginx.conf
 
-# set locale
-RUN localedef -v -c -i zh_CN -f UTF-8 zh_CN.UTF-8
-
 # add ENV 
 ENV NGINX_HOME /usr/local/nginx
 
