@@ -38,7 +38,7 @@ docker network rm env10
 echo '-------------------------Create new Network env10--------------------------'
 docker network create -d bridge --subnet 192.168.10.0/24 env10
 echo 'Run env10_2_Nginx01'
-docker run -d -p 3000:80 --net=env10 --ip=192.168.10.2 --restart=always --name env10_2_Nginx01 yi/centos7-ssh-tengine
+docker run -d -p 80:80 --net=env10 --ip=192.168.10.2 --restart=always --name env10_2_Nginx01 yi/centos7-ssh-tengine
 echo 'Run env10_3_Redis01'
 docker run -d --net=env10 --ip=192.168.10.3 --restart=always --name env10_3_Redis01 yi/centos7-redis
 echo 'Run env10_4_Mysql01'
