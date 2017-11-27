@@ -16,4 +16,4 @@ RUN chmod 777 atlassian-confluence-6.3.1-x64.bin
 COPY atlassian-extras-decoder-v2-3.2.jar /home/work/apps/
 
 
-EXPORSE 8090
+EXPOSE 8090
