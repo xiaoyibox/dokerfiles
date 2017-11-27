@@ -22,15 +22,15 @@ echo 'Destory env10_6_Mq01'
 docker stop env10_6_Mq01
 docker rm env10_6_Mq01
 echo 'Desory env10_7_Mycat01'
-docker rm env10_7_Mycat01
+docker stop env10_7_Mycat01
 docker rm env10_7_Mycat01
 
 echo 'Desory env10_201_confluence'
-docker rm env10_201_confluence
+docker stop env10_201_confluence
 docker rm env10_201_confluence
 
 echo 'Desory env10_202_jira'
-docker rm env10_202_jira
+docker stop env10_202_jira
 docker rm env10_202_jira
 echo '==================================================='
 echo 'Remove docker network bridge env10'
