@@ -2,6 +2,32 @@
 
 ### IP : 192.168.10.1/24
 
+##### 1. 在hosts中配置一下域名
+~~~
+192.168.110.140 jira.local.com
+192.168.110.140 mq.local.com
+192.168.110.140 confluence.local.com
+~~~
+
+##### 2. 给env10.1下的所有.sh授权
+~~~
+chmod 777 *.sh
+~~~
+
+##### 3. 运行step1.sh 构建所有的镜像
+
+##### 4. 运行step2.sh 运行所有的容器
+
+##### 5. 配置mysql
+~~~
+
+~~~
+
+
+
+
+---
+
 #### Steps:
 ##### 1 Create Bridge
 Default 3 NETWORKs in docker

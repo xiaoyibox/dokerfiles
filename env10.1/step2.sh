@@ -42,7 +42,7 @@ docker run -d -p 80:80 --net=env10 --ip=192.168.10.2 --restart=always --name env
 echo 'Run env10_3_Redis01'
 docker run -d --net=env10 --ip=192.168.10.3 --restart=always --name env10_3_Redis01 yi/centos7-redis
 echo 'Run env10_4_Mysql01'
-docker run -d --net=env10 --ip=192.168.10.4 --restart=always --name env10_4_Mysql01 yi/centos7-mysql5.6.38
+docker run -d -p 3306:3306 --net=env10 --ip=192.168.10.4 --restart=always --name env10_4_Mysql01 yi/centos7-mysql5.6.38
 echo 'Run env10_5_Zookeeper01'
 docker run -d --net=env10 --ip=192.168.10.5 --restart=always --name env10_5_Zookeeper01 yi/centos7-zookeeper3.4.11
 echo 'Run env10_6_Mq01'
