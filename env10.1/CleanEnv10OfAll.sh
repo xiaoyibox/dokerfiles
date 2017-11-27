@@ -30,6 +30,17 @@ echo '-------------------------Create new Network env10-------------------------
 docker network create -d bridge --subnet 192.168.10.0/24 env10
 echo 'Run env10_2_Nginx01'
 docker run -d -p 3000:80 --net=env10 --ip=192.168.10.2 --restart=always --name env10_2_Nginx01 yi/centos7-ssh-tengine
+echo 'Run env10_3_Redis01'
+docker run -d --net=env10 --ip=192.168.10.3 --restart=always --name env10_3_Redis01 yi/centos7-redis
+echo 'Run env10_4_Mysql01'
+docker run -d --net=env10 --ip=192.168.10.4 --restart=always --name env10_4_Mysql01 yi/centos7-mysql5.6.38
+echo 'Run env10_5_Zookeeper01'
+docker run -d --net=env10 --ip=192.168.10.5 --restart=always --name env10_5_Zookeeper01 yi/centos7-zookeeper3.4.11
+echo 'Run env10_6_Mq01'
+docker run -d --net=env10 --ip=192.168.10.6 --restart=always --name env10_6_Mq01 yi/centos7-activemq5.15.2
+echo 'Run env10_7_Mycat01'
+docker run -d --net=env10 --ip=192.168.10.7 --restart=always --name env10_7_Mycat01 yi/centos7-mycat1.6
+
 
 echo 'over ^_^'
 
