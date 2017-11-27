@@ -24,7 +24,7 @@ docker network create -d bridge --subnet 192.168.10.0/24 env10
 
 Run Container:
 ~~~
-docker run -itd -p host port : container port -p etc. --net=bridge name --ip=container ip \
+docker run -itd -p host port : container port -p etc. --net=bridge name --ip=container ip  --restart=always \
 --name [container name] [image name]
 ~~~
 
@@ -32,3 +32,15 @@ Check Container network:
 ~~~
 docker network inspect containerName 
 ~~~
+
+Remove network
+~~~
+# cut connection of all container
+docker network disconnet bridgeName containerName
+# Remove network
+docker network rm bridgeName
+~~~
+
+
+
+
