@@ -15,5 +15,5 @@ COPY dubbo-admin-2.8.4.zip /usr/local/apache-tomcat-7.0.82/webapps/
 WORKDIR /usr/local/apache-tomcat-7.0.82/webapps/
 
 RUN unzip dubbo-admin-2.8.4.zip
-RUN mv dubbo-admin-2.8.4 ROOT
+RUN cp -fr dubbo-admin-2.8.4/* ./ROOT
 RUN rm dubbo-admin-2.8.4.zip
