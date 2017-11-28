@@ -61,7 +61,7 @@ docker run -d --net=env10 --ip=192.168.10.201 --restart=always --name env10_201_
 echo 'Run env10_202_jira'
 docker run -d --net=env10 --ip=192.168.10.202 --restart=always --name env10_202_jira yi/centos7-jira
 echo 'Run env10_203_dubboadmin'
-docker run -d --net=env10 --ip=192.168.10.203 --restart=always --name env10_203_dubboadmin yi/centos7-dubboadmin254
+docker run -d --net=env10 --ip=192.168.10.203 --restart=always --name env10_203_dubboadmin yi/centos7-dubboadmin284
 
 
 echo 'over ^_^'
