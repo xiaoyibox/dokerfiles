@@ -5,7 +5,7 @@
 
 echo 'clean all images of centos7'
 docker rmi centos yi/centos7-ssh yi/centos7-jdk8u151 yi/centos7-redis yi/centos7-ssh-tengine yi/centos7-mysql5.6.38 yi/centos7-zookeeper3.4.11 
-docker rmi yi/centos7-activemq5.15.2 yi/centos7-confluence yi/centos7-jira yi/centos7-mycat1.6 yi/centos7-tomcat7
+docker rmi yi/centos7-activemq5.15.2 yi/centos7-confluence yi/centos7-jira yi/centos7-mycat1.6 yi/centos7-tomcat7 yi/centos7-dubboadmin254
 
 echo '1. pull centos from Docker'
 docker pull centos

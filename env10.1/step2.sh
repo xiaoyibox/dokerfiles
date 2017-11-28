@@ -18,20 +18,26 @@ docker rm env10_4_Mysql01
 echo 'Destory env10_5_Zookeeper01'
 docker stop env10_5_Zookeeper01
 docker rm env10_5_Zookeeper01
-echo 'Destory env10_6_Mq01'
+echo 'Destroy env10_6_Mq01'
 docker stop env10_6_Mq01
 docker rm env10_6_Mq01
-echo 'Desory env10_7_Mycat01'
+echo 'Destroy env10_7_Mycat01'
 docker stop env10_7_Mycat01
 docker rm env10_7_Mycat01
 
-echo 'Desory env10_201_confluence'
+echo 'Destroy env10_201_confluence'
 docker stop env10_201_confluence
 docker rm env10_201_confluence
 
-echo 'Desory env10_202_jira'
+echo 'Destroy env10_202_jira'
 docker stop env10_202_jira
 docker rm env10_202_jira
+
+echo 'Destroy env10_203_dubboadmin'
+docker stop env10_203_dubboadmin
+docker rm env10_203_dubboadmin
+
+
 echo '==================================================='
 echo 'Remove docker network bridge env10'
 docker network rm env10
@@ -54,6 +60,8 @@ echo 'Run env10_201_confluence'
 docker run -d --net=env10 --ip=192.168.10.201 --restart=always --name env10_201_confluence yi/centos7-confluence
 echo 'Run env10_202_jira'
 docker run -d --net=env10 --ip=192.168.10.202 --restart=always --name env10_202_jira yi/centos7-jira
+echo 'Run env10_203_dubboadmin'
+docker run -d --net=env10 --ip=192.168.10.203 --restart=always --name env10_203_dubboadmin yi/centos7-dubboadmin254
 
 
 echo 'over ^_^'
