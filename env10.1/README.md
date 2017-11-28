@@ -20,7 +20,12 @@ chmod 777 *.sh
 
 ##### 5. 配置mysql
 ~~~
-
+mysql -uroot -p
+# input password [default none]
+# set remote connection
+# grant all privileges on *.* to root@'%' identified by '123456' with grant option;
+mysql > grant all privileges on *.* to root@'%' identified by 'newpassword' with grant option;
+mysql > flush privileges;
 ~~~
 
 
