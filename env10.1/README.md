@@ -100,6 +100,12 @@ cp /home/work/apps/atlassian-extras-decoder-v2-3.2.jar /opt/atlassian/confluence
 完成破解,授权到期日	你的评估版将于956 months, 21 days, 5 hours到期。
 
 
+##### 8. 安装Jenkins : URL : http://jenkins.local.com
+#### 注意：第一次访问时，需要填写"initialAdminPassword",文件在
+~~~
+cat /root/.jenkins/secrets/initialAdminPassword
+~~~
+安装的时候选择左边的安装。
 
 
 
