@@ -29,6 +29,7 @@ mysql > flush privileges;
 ~~~
 
 ##### 6. 安装JIRA : URL : http://jira.local.com
+##### JIRA中包含了Scrum插件
 ~~~
 # in jira server ： /home/work/apps/
 # Running 
