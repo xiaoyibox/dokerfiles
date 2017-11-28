@@ -44,4 +44,7 @@ docker build -t 'yi/centos7-mycat1.6' ../src/mycat1.6/
 echo '12. Tomcat FROM yi/centos7-jdk8u151 ...'
 docker build -t 'yi/centos7-tomcat7' ../src/tomcat7/
 
+echo '13. DubboxAdmin FROM yi/centos7-jdk8u151 ...'
+docker build -t 'yi/centos7-dubboadmin254' ../src/dubboadmin254/
+
 echo "that's over"
