@@ -16,7 +16,7 @@ RUN tar -zxvf apache-tomcat-7.0.82.tar.gz
 RUN rm apache-tomcat-7.0.82.tar.gz
 WORKDIR /home/work/apps/
 
-EXPOSE 8080
+# EXPOSE 8080
 
-COPY supervisord.conf /etc/supervisord.conf
-CMD ["/usr/bin/supervisord"]
+# COPY supervisord.conf /etc/supervisord.conf
+# CMD ["/usr/bin/supervisord"]

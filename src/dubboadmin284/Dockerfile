@@ -20,3 +20,8 @@ RUN rm dubbo-admin-2.8.4.zip
 RUN rm -fr dubbo-admin-2.8.4
 
 COPY dubbo.properties /usr/local/apache-tomcat-7.0.82/webapps/ROOT/WEB-INF/
+
+EXPOSE 8080
+
+COPY supervisord.conf /etc/supervisord.conf
+CMD ["/usr/bin/supervisord"]
