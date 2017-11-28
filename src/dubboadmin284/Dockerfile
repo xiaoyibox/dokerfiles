@@ -18,6 +18,10 @@ RUN unzip dubbo-admin-2.8.4.zip
 RUN cp -fr dubbo-admin-2.8.4/* ./ROOT
 RUN rm dubbo-admin-2.8.4.zip
 RUN rm -fr dubbo-admin-2.8.4
+RUN rm -fr docs
+RUN rm -fr examples
+RUN rm -fr manager
+RUN rm -fr host-manager
 
 COPY dubbo.properties /usr/local/apache-tomcat-7.0.82/webapps/ROOT/WEB-INF/
 
