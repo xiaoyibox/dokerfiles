@@ -37,6 +37,11 @@ echo 'Destroy env10_203_dubboadmin'
 docker stop env10_203_dubboadmin
 docker rm env10_203_dubboadmin
 
+#yi/centos7-jenkins
+echo 'Destroy env10_204_jenkins'
+docker stop env10_204_jenkins
+docker rm env10_204_jenkins
+
 
 echo '==================================================='
 echo 'Remove docker network bridge env10'
@@ -62,6 +67,10 @@ echo 'Run env10_202_jira'
 docker run -d --net=env10 --ip=192.168.10.202 --restart=always --name env10_202_jira yi/centos7-jira
 echo 'Run env10_203_dubboadmin'
 docker run -d --net=env10 --ip=192.168.10.203 --restart=always --name env10_203_dubboadmin yi/centos7-dubboadmin284
+echo 'Run env10_204_jenkins'
+docker run -d --net=env10 --ip=192.168.10.204 --restart=always --name env10_204_jenkins yi/centos7-jenkins
+
+
 
 
 echo 'over ^_^'

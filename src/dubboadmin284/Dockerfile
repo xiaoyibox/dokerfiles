@@ -25,7 +25,7 @@ RUN rm -fr host-manager
 
 COPY dubbo.properties /usr/local/apache-tomcat-7.0.82/webapps/ROOT/WEB-INF/
 
-EXPOSE 8080
+# EXPOSE 8080
 
-COPY supervisord.conf /etc/supervisord.conf
-CMD ["/usr/bin/supervisord"]
+# COPY supervisord.conf /etc/supervisord.conf
+# CMD ["/usr/bin/supervisord"]

@@ -5,7 +5,7 @@
 
 echo 'clean all images of centos7'
 docker rmi centos yi/centos7-ssh yi/centos7-jdk8u151 yi/centos7-redis yi/centos7-ssh-tengine yi/centos7-mysql5.6.38 yi/centos7-zookeeper3.4.11 
-docker rmi yi/centos7-activemq5.15.2 yi/centos7-confluence yi/centos7-jira yi/centos7-mycat1.6 yi/centos7-tomcat7 yi/centos7-dubboadmin254
+docker rmi yi/centos7-activemq5.15.2 yi/centos7-confluence yi/centos7-jira yi/centos7-mycat1.6 yi/centos7-tomcat7 yi/centos7-dubboadmin254 yi/centos7-jenkins
 
 echo '1. pull centos from Docker'
 docker pull centos
@@ -44,7 +44,10 @@ docker build -t 'yi/centos7-mycat1.6' ../src/mycat1.6/
 echo '12. Tomcat FROM yi/centos7-jdk8u151 ...'
 docker build -t 'yi/centos7-tomcat7' ../src/tomcat7/
 
-echo '13. DubboxAdmin FROM yi/centos7-jdk8u151 ...'
+echo '13. DubboxAdmin FROM yi/centos7-tomcat7 ...'
 docker build -t 'yi/centos7-dubboadmin284' ../src/dubboadmin284/
+
+echo '14. Jenkins FROM yi/centos7-tomcat7 ...'
+docker build -t 'yi/centos7-jenkins' ../src/jenkins2.73.3/
 
 echo "that's over"
