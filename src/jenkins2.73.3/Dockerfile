@@ -12,7 +12,7 @@ RUN rm -fr ./*
 RUN wget http://mirrors.jenkins.io/war-stable/latest/jenkins.war
 
 
-RUN ajr -xvf jenkins.war
+RUN jar -xvf jenkins.war
 RUN rm jenkins.war
 
 
