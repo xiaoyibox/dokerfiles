@@ -63,6 +63,7 @@ cp /home/work/apps/atlassian-extras-3.2.jar /opt/atlassian/jira/atlassian-jira/W
 
 
 ##### 7. 安装Confluence : URL : http://confluence.local.com
+#### 注意：confluence安装需要很长的时间，特别是初始化数据的时候，所以Nginx的等待超时的时间会等不上，可以先把nginx的超时时间改长，或者将端口映射到宿主机上进行配置。
 ~~~
 # in jira server ： /home/work/apps/
 # Running 
