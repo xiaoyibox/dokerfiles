@@ -8,6 +8,7 @@
 192.168.110.140 mq.local.com
 192.168.110.140 confluence.local.com
 192.168.110.140 da.local.com
+192.168.110.140 jenkins.local.com
 ~~~
 
 ##### 2. 给env10.1下的所有.sh授权
