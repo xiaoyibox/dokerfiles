@@ -66,34 +66,34 @@ cp /home/work/apps/atlassian-extras-3.2.jar /opt/atlassian/jira/atlassian-jira/W
 ~~~
 # in jira server ： /home/work/apps/
 # Running 
-./atlassian-jira-software-7.3.8-x64.bin
+./atlassian-confluence-6.3.1-x64.bin
 # input o
 # input 1
 # input i
 # input y
 # -----------installed---------- #
-# Installation Directory: /opt/atlassian/jira
-# Home Directory: /var/atlassian/application-data/jira
-# HTTP Port: 8080
-# RMI Port: 8005
+# Installation Directory: /opt/atlassian/confluence
+# Home Directory: /var/atlassian/application-data/confluence
+# HTTP Port: 8090
+# RMI Port: 8000
 
 # ------- jira Commond-------#
-/etc/rc.d/init.d/jira [start|stop]
+/etc/rc.d/init.d/confluence [start|restart|stop]
 ~~~
 
-关闭jira，并将mysql的驱动jar包拷贝到如下路径：
+关闭confluence，并将mysql的驱动jar包拷贝到如下路径：
 ~~~
-/etc/rc.d/init.d/jira stop
-cp /home/work/apps/mysql-connector-java-5.1.39-bin.jar /opt/atlassian/jira/atlassian-jira/WEB-INF/lib/
-/etc/rc.d/init.d/jira start
+/etc/rc.d/init.d/confluence stop
+cp /home/work/apps/mysql-connector-java-5.1.39-bin.jar /opt/atlassian/confluence/confluence/WEB-INF/lib/
+/etc/rc.d/init.d/confluence start
 ~~~
 进入网页进行安装，选择生产环境安装，选择mysql填写mysql的相关信息，点击测试连接，成功后，就可以继续了。等待的过程中会报错，然后再次访问主域名继续即可。在进行授权的时候，到官网去授权，然后关闭jira，拷贝破解文件到一下路径，重启jira，完成破解。
 ~~~
-/etc/rc.d/init.d/jira stop
-cp /home/work/apps/atlassian-extras-3.2.jar /opt/atlassian/jira/atlassian-jira/WEB-INF/lib/
-/etc/rc.d/init.d/jira start
+/etc/rc.d/init.d/confluence stop
+cp /home/work/apps/atlassian-extras-decoder-v2-3.2.jar /opt/atlassian/confluence/confluence/WEB-INF/lib/
+/etc/rc.d/init.d/confluence start
 ~~~
-完成破解,截至日期：08/二月/33
+完成破解,授权到期日	你的评估版将于956 months, 21 days, 5 hours到期。
 
 
 
