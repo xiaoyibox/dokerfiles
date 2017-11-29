@@ -19,7 +19,9 @@ chmod 777 *.sh
 ##### 3. 运行im-1.sh 构建所有的镜像[Image Manager]
 im-1.sh [who | del | dockerfilepath]
 > who : [all | imageName] all代表生成所有的镜像  imageName代表仅生成imageName的镜像 【必传】
+
 > del : [yes | y | no | n] 【必传，建议传n】
+
 > dockerfilepath [全路径 | 相对路径] 全路径：从root开始 相对路径： ../
 
 e.g.
@@ -31,11 +33,14 @@ e.g.
 
 
 ##### 4. 运行InitContainers.sh 运行所有的容器
+
 InitContainers.sh [init] 仅有一个参数init，初始化后将不再使用
 
-###重构镜像 : ./im-1.sh yi/centos7-ssh n ../src/centos7/
-###Destory Container : ./CleanContainer.sh env10_2_Nginx01
-###Run Container : Copy commond from InitContainers-2.sh
+### 重构镜像 : ./im-1.sh yi/centos7-ssh n ../src/centos7/
+
+### Destory Container : ./CleanContainer.sh env10_2_Nginx01
+
+### Run Container : Copy commond from InitContainers-2.sh
 
 ##### 5. 配置mysql
 ~~~
