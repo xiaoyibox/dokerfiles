@@ -6,7 +6,9 @@
 FROM yi/centos7-tomcat7
 MAINTAINER Yi.Ma <findlymw@gmail.com>
 
-RUN yum install -y git
+RUN yum install -y git maven
+
+#maven home : /usr/share/maven
 
 WORKDIR /usr/local/apache-tomcat-7.0.82/webapps/ROOT/
 RUN rm -fr ./*
