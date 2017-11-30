@@ -12,9 +12,9 @@ WORKDIR /home/work/apps/
 
 RUN yum install wget -y
 
-# RUN wget https://bintray.com/kong/kong-community-edition-rpm/rpm -O bintray-kong-kong-community-edition-rpm.repo
+RUN wget https://bintray.com/kong/kong-community-edition-rpm/rpm -O bintray-kong-kong-community-edition-rpm.repo
 
-# RUN mv bintray-kong-kong-community-edition-rpm.repo /etc/yum.repos.d/
+RUN mv bintray-kong-kong-community-edition-rpm.repo /etc/yum.repos.d/
 
 RUN yum install epel-release -y
 
