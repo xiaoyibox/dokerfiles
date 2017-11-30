@@ -22,26 +22,48 @@ containers[10]="env10_8_Kong01"
 
 
 if [[ "$who"x == "nginx"x ]]; then
+	docker stop ${containers[0]}
+	docker rm ${containers[0]}
 	docker run -d -p 80:80 --net=${bridgename} --ip=192.168.10.2 --restart=always --name ${containers[0]} yi/centos7-ssh-tengine-local
 elif [[ "$who"x == "redis"x ]]; then
+	docker stop ${containers[1]}
+	docker rm ${containers[1]}
 	docker run -d --net=${bridgename} --ip=192.168.10.3 --restart=always --name ${containers[1]} yi/centos7-redis
 elif [[ "$who"x == "mysql"x ]]; then
+	docker stop ${containers[2]}
+	docker rm ${containers[2]}
 	docker run -d -p 3306:3306 --net=${bridgename} --ip=192.168.10.4 --restart=always --name ${containers[2]} yi/centos7-mysql5.6.38
 elif [[ "$who"x == "zookeeper"x ]]; then
+	docker stop ${containers[3]}
+	docker rm ${containers[3]}
 	docker run -d --net=${bridgename} --ip=192.168.10.5 --restart=always --name ${containers[3]} yi/centos7-zookeeper3.4.11
 elif [[ "$who"x == "mq"x ]]; then
+	docker stop ${containers[4]}
+	docker rm ${containers[4]}
 	docker run -d --net=${bridgename} --ip=192.168.10.6 --restart=always --name ${containers[4]} yi/centos7-activemq5.15.2
 elif [[ "$who"x == "mycat"x ]]; then
+	docker stop ${containers[5]}
+	docker rm ${containers[5]}
 	docker run -d --net=${bridgename} --ip=192.168.10.7 --restart=always --name ${containers[5]} yi/centos7-mycat1.6
 elif [[ "$who"x == "confluence"x ]]; then
+	docker stop ${containers[6]}
+	docker rm ${containers[6]}
 	docker run -d --net=${bridgename} --ip=192.168.10.201 --restart=always --name ${containers[6]} yi/centos7-confluence
 elif [[ "$who"x == "jira"x ]]; then
+	docker stop ${containers[7]}
+	docker rm ${containers[7]}
 	docker run -d --net=${bridgename} --ip=192.168.10.202 --restart=always --name ${containers[7]} yi/centos7-jira
 elif [[ "$who"x == "dubboadmin"x ]]; then
+	docker stop ${containers[8]}
+	docker rm ${containers[8]}
 	docker run -d --net=${bridgename} --ip=192.168.10.203 --restart=always --name ${containers[8]} yi/centos7-dubboadmin284
 elif [[ "$who"x == "jenkins"x ]]; then
+	docker stop ${containers[9]}
+	docker rm ${containers[9]}
 	docker run -d --net=${bridgename} --ip=192.168.10.204 --restart=always --name ${containers[9]} yi/centos7-jenkins
 elif [[ "$who"x == "kong"x ]]; then
+	docker stop ${containers[10]}
+	docker rm ${containers[10]}
 	docker run -d -p 8001:22 --net=${bridgename} --ip=192.168.10.8 --restart=always --name ${containers[10]} yi/centos7-kong
 else
 	echo "Sorry,no any service."
