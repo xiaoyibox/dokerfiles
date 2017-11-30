@@ -14,7 +14,13 @@
 ### 1 初始化数据库
 RUN /usr/pgsql-9.6/bin/postgresql96-setup initdb
 
-### 2 安装完成后，需要修改密码
+### 2 copy conf files
+
+cp /home/work/apps/pg_hba.conf /var/lib/pgsql/9.6/data/pg_hba.conf
+cp /home/work/apps/postgresql.conf /var/lib/pgsql/9.6/data/postgresql.conf
+
+
+### 3 安装完成后，需要修改密码
 进入命令行
 ~~~
 su postgres

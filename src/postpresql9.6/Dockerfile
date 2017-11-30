@@ -14,8 +14,11 @@ RUN rpm -aq| grep postgres
 #设置开机启动数据库
 RUN systemctl enable postgresql-9.6.service
 
-COPY pg_hba.conf /var/lib/pgsql/9.6/data/
-COPY postgresql.conf /var/lib/pgsql/9.6/data/
+
+
+COPY pg_hba.conf /home/work/apps/
+COPY postgresql.conf /home/work/apps/
+
 
 #启动数据库
 # systemctl start postgresql-9.6.service
