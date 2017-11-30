@@ -34,27 +34,27 @@ ips[10]="run -d -p 8001:22 --net=${bridgename} --ip=192.168.10.8 --restart=alway
 
 
 if [[ "$who"x == "nginx"x ]]; then
-	docker run ips[0]
+	docker run $ips[0]
 elif [[ "$who"x == "redis"x ]]; then
-	docker run ips[1]
+	docker run $ips[1]
 elif [[ "$who"x == "mysql"x ]]; then
-	docker run ips[2]
+	docker run $ips[2]
 elif [[ "$who"x == "zookeeper"x ]]; then
-	docker run ips[3]
+	docker run $ips[3]
 elif [[ "$who"x == "mq"x ]]; then
-	docker run ips[4]
+	docker run $ips[4]
 elif [[ "$who"x == "mycat"x ]]; then
-	docker run ips[5]
+	docker run $ips[5]
 elif [[ "$who"x == "confluence"x ]]; then
-	docker run ips[6]
+	docker run $ips[6]
 elif [[ "$who"x == "jira"x ]]; then
-	docker run ips[7]
+	docker run $ips[7]
 elif [[ "$who"x == "dubboadmin"x ]]; then
-	docker run ips[8]
+	docker run $ips[8]
 elif [[ "$who"x == "jenkins"x ]]; then
-	docker run ips[9]
+	docker run $ips[9]
 elif [[ "$who"x == "kong"x ]]; then
-	docker run ips[10]
+	docker run $ips[10]
 else
 	echo "Sorry,no any service."
 fi
