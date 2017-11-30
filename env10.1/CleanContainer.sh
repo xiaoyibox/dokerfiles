@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # clean container
 #container
 container=$1
