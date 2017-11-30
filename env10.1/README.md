@@ -22,13 +22,13 @@ im-1.sh [who | del | dockerfilepath]
 
 > del : [yes | y | no | n] 【必传，建议传n】
 
-> dockerfilepath [全路径 | 相对路径] 全路径：从root开始 相对路径： ../
+> dockerfilepath [全路径 | 相对路径] 全路径：从root开始 相对路径： ./
 
 e.g.
 ~~~
 ./im-1.sh all n | ./im.sh all n
-./im-1.sh yi/centos7-ssh y ../src/centos7/
-./im-1.sh yi/centos7-ssh n ../src/centos7/
+./im-1.sh yi/centos7-ssh y ./src/centos7/
+./im-1.sh yi/centos7-ssh n ./src/centos7/
 ~~~
 
 
@@ -36,7 +36,7 @@ e.g.
 
 InitContainers.sh [init] 仅有一个参数init，初始化后将不再使用
 
-### 重构镜像 : ./im-1.sh yi/centos7-ssh n ../src/centos7/
+### 重构镜像 : ./im-1.sh yi/centos7-ssh n ./src/centos7/
 
 ### Destory Container : ./CleanContainer.sh env10_2_Nginx01
 
