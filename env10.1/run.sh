@@ -34,6 +34,7 @@ ips[10]="run -d -p 8001:22 --net=${bridgename} --ip=192.168.10.8 --restart=alway
 
 
 if [[ "$who"x == "nginx"x ]]; then
+	echo "$ips[0]"
 	docker run $ips[0]
 elif [[ "$who"x == "redis"x ]]; then
 	docker run $ips[1]
