@@ -18,4 +18,5 @@ RUN mv bintray-kong-kong-community-edition-rpm.repo /etc/yum.repos.d/
 
 RUN yum install epel-release -y
 
-RUN yum install kong
+RUN yum install kong -y
+
