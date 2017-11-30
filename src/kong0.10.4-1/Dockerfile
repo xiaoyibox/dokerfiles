@@ -13,11 +13,9 @@ WORKDIR /home/work/apps/
 
 RUN yum install wget pcre pcre-devel zlib zlib-devel openssl openssl-devel -y
 
-RUN wget https://bintray.com/kong/kong-community-edition-rpm/rpm -O bintray-kong-kong-community-edition-rpm.repo
-
-RUN mv bintray-kong-kong-community-edition-rpm.repo /etc/yum.repos.d/
+RUN wget https://bintray.com/kong/kong-community-edition-rpm/download_file?file_path=dists/kong-community-edition-0.11.2.el7.noarch.rpm
 
 RUN yum install epel-release -y
 
-RUN yum install kong-community-edition-0.11.2.*.noarch.rpm -y
+RUN rpm -ivh kong-community-edition-0.11.2.el7.noarch.rpm
 
