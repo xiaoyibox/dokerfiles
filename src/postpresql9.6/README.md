@@ -19,8 +19,14 @@ RUN /usr/pgsql-9.6/bin/postgresql96-setup initdb
 cp /home/work/apps/pg_hba.conf /var/lib/pgsql/9.6/data/pg_hba.conf
 cp /home/work/apps/postgresql.conf /var/lib/pgsql/9.6/data/postgresql.conf
 
+重启：service postgresql-9.6 restart
+状态：service postgresql-9.6 status  [绿色的等是正常]
+
+
+
 
 ### 3 安装完成后，需要修改密码
+#### root权限下，su postgres就进入了bash脚本，psql命令进入数据库
 进入命令行
 ~~~
 su postgres
