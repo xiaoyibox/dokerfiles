@@ -103,10 +103,10 @@ else
 				if [ "$del"x == "yes"x ] || [ "$del"x == "y"x ] ; then
 					echo "Running [\033[40;35;1m ${who} \033[0m] starting, is del [\033[40;35;1m yes \033[0m]..."
 					docker rmi ${del}
-					docker build -t "'${who}'" ${dockerfilepath}
+					docker build -t "${who}" ${dockerfilepath}
 				else
 					echo "Running [\033[40;35;1m ${who} \033[0m] starting, is del [\033[40;35;1m no \033[0m]"
-					docker build -t "'${who}'" ${dockerfilepath}
+					docker build -t "${who}" ${dockerfilepath}
 				fi	
 			else
 				echo "Sorry, del Failed [${del}]..."
