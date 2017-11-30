@@ -1,5 +1,5 @@
 #
-# KONG 0.10.4-1
+# KONG 0.11.2.el7.noarch
 # Dependyce yi/centos7-ssh
 # Default port : 8001
 #
