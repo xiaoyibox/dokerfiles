@@ -14,6 +14,6 @@ WORKDIR /home/work/apps/
 
 RUN yum install epel-release -y
 
-RUN yum https://bintray.com/kong/kong-community-edition-rpm -y
+RUN yum localinstall https://bintray.com/kong/kong-community-edition-rpm -y
 
 RUN yum install kong-community-edition-0.11.2.*.noarch.rpm --nogpgcheck
