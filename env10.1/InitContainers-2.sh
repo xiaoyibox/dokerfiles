@@ -33,6 +33,7 @@ containers[6]="env10_201_confluence"
 containers[7]="env10_202_jira"
 containers[8]="env10_203_dubboadmin"
 containers[9]="env10_204_jenkins"
+containers[10]="env10_8_Kong01"
 
 ips[0]="run -d -p 80:80 --net=${bridgename} --ip=192.168.10.2 --restart=always --name ${containers[0]} yi/centos7-ssh-tengine-local"
 ips[1]="run -d --net=${bridgename} --ip=192.168.10.3 --restart=always --name ${containers[1]} yi/centos7-redis"
@@ -44,7 +45,7 @@ ips[6]="run -d --net=${bridgename} --ip=192.168.10.201 --restart=always --name $
 ips[7]="run -d --net=${bridgename} --ip=192.168.10.202 --restart=always --name ${containers[7]} yi/centos7-jira"
 ips[8]="run -d --net=${bridgename} --ip=192.168.10.203 --restart=always --name ${containers[8]} yi/centos7-dubboadmin284"
 ips[9]="run -d --net=${bridgename} --ip=192.168.10.204 --restart=always --name ${containers[9]} yi/centos7-jenkins"
-
+ips[10]="run -d -p 8001:22 --net=${bridgename} --ip=192.168.10.8 --restart=always --name ${containers[10]} yi/centos7-kong"
 
 
 if [[ "$active"x == "init"x ]]; then
