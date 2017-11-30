@@ -67,6 +67,9 @@ paths[12]="../src/dubboadmin284/"
 images[13]="yi/centos7-jenkins"
 paths[13]="../src/jenkins2.73.3/"
 
+images[14]="yi/centos7-kong"
+paths[14]="../src/kong0.11.2.el7.noarch/"
+
 if [ "$who"x == ""x ] || [ "$del"x == ""x ] ; then
 	echo "Sorry, you must input who and del..."
 else
@@ -100,10 +103,10 @@ else
 				if [ "$del"x == "yes"x ] || [ "$del"x == "y"x ] ; then
 					echo "Running [\033[40;35;1m ${who} \033[0m] starting, is del [\033[40;35;1m yes \033[0m]..."
 					docker rmi ${del}
-					docker build -t ${who} ${dockerfilepath}
+					docker build -t '${who}' ${dockerfilepath}
 				else
 					echo "Running [\033[40;35;1m ${who} \033[0m] starting, is del [\033[40;35;1m no \033[0m]"
-					docker build -t ${who} ${dockerfilepath}
+					docker build -t '${who}' ${dockerfilepath}
 				fi	
 			else
 				echo "Sorry, del Failed [${del}]..."
