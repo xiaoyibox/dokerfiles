@@ -16,6 +16,9 @@ containers[7]="env10_202_jira"
 containers[8]="env10_203_dubboadmin"
 containers[9]="env10_204_jenkins"
 containers[10]="env10_8_Kong01"
+containers[11]="env10_9_postpresql01"
+
+
 
 
 
@@ -65,6 +68,10 @@ elif [[ "$who"x == "kong"x ]]; then
 	docker stop ${containers[10]}
 	docker rm ${containers[10]}
 	docker run -d -p 8001:22 --net=${bridgename} --ip=192.168.10.8 --restart=always --name ${containers[10]} yi/centos7-kong
+elif [[ "$who"x == "postpresql"x ]] ; then
+	docker stop ${containers[11]}
+	docker rm ${containers[11]}
+	docker run -d --net=${bridgename} --ip=192.168.10.9 --privileged=true --name ${containers[11]} --restart=always yi/centos7-postpresql9.6 /usr/sbin/init
 else
 	echo "Sorry,no any service."
 fi

@@ -131,6 +131,28 @@ cat /root/.jenkins/secrets/initialAdminPassword
 安装的时候选择左边的安装。
 
 
+# 新添加server，需要添加的内容
+1 im-1.sh中添加
+~~~
+images[index]="yi/centos7-postpresql9.6"
+paths[index]="../src/postpresql9.6"
+~~~
+
+2 InitContainers-2.sh中添加
+~~~
+containers[11]="env10_9_postpresql01"
+ips[11]="run -d --net=${bridgename} --ip=192.168.10.9 --privileged=true --name ${containers[11]} --restart=always yi/centos7-postpresql9.6 /usr/sbin/init"
+~~~
+
+3 run.sh中添加
+~~~
+containers[11]="env10_9_postpresql01"
+elif [[ "$who"x == "postpresql"x ]] ; then
+	docker stop ${containers[11]}
+	docker rm ${containers[11]}
+	docker run -d --net=${bridgename} --ip=192.168.10.9 --privileged=true --name ${containers[11]} --restart=always yi/centos7-postpresql9.6 /usr/sbin/init
+~~~
+
 
 ---
 
