@@ -71,7 +71,7 @@ elif [[ "$who"x == "kong"x ]]; then
 elif [[ "$who"x == "postpresql"x ]] ; then
 	docker stop ${containers[11]}
 	docker rm ${containers[11]}
-	docker run -d --net=${bridgename} --ip=192.168.10.9 --privileged=true --name ${containers[11]} --restart=always yi/centos7-postpresql9.6 /usr/sbin/init
+	docker run -d -p 5432:5432 --net=${bridgename} --ip=192.168.10.9 --privileged=true --name ${containers[11]} --restart=always yi/centos7-postpresql9.6 /usr/sbin/init
 else
 	echo "Sorry,no any service."
 fi

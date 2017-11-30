@@ -9,7 +9,12 @@
 
 ### Port:5432
 
-### 安装完成后，需要修改密码
+## 进入系统后
+
+### 1 初始化数据库
+RUN /usr/pgsql-9.6/bin/postgresql96-setup initdb
+
+### 2 安装完成后，需要修改密码
 进入命令行
 ~~~
 su postgres
