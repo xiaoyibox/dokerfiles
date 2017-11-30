@@ -11,7 +11,7 @@ MAINTAINER Yi.Ma <findlymw@gmail.com>
 # Install libs
 WORKDIR /home/work/apps/
 
-RUN yum install wget pcre pcre-devel zlib zlib-devel openssl openssl-devel -y
+RUN yum install wget pcre pcre-devel zlib zlib-devel openssl openssl-devel perl-Time-HiRes -y
 
 RUN wget https://bintray.com/kong/kong-community-edition-rpm/download_file?file_path=dists/kong-community-edition-0.11.2.el7.noarch.rpm
 
