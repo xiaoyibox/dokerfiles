@@ -15,7 +15,7 @@ RUN yum install wget pcre pcre-devel zlib zlib-devel openssl openssl-devel perl-
 
 RUN wget https://bintray.com/kong/kong-community-edition-rpm/download_file?file_path=dists/kong-community-edition-0.11.2.el7.noarch.rpm
 
-RUN mv download_file?file_path=dists/kong-community-edition-0.11.2.el7.noarch.rpm ./kong-community-edition-0.11.2.el7.noarch.rpm
+RUN mv download_file?file_path=dists%2Fkong-community-edition-0.11.2.el7.noarch.rpm ./kong-community-edition-0.11.2.el7.noarch.rpm
 
 RUN yum install epel-release -y
 
