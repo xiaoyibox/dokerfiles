@@ -11,7 +11,7 @@ RUN yum install postgresql96 postgresql96-server postgresql96-contrib postgresql
 #检查是否安装成功
 RUN rpm -aq| grep postgres
 #初始化数据库
-RUN /usr/pgsql-9.6/bin/postgresql96-setup initdb
+#RUN /usr/pgsql-9.6/bin/postgresql96-setup initdb
 #设置开机启动数据库
 RUN systemctl enable postgresql-9.6.service
 
