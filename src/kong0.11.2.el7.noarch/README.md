@@ -21,3 +21,14 @@ If you are using PostgreSQL, please provision a database and a user, ie:
 ~~~
 CREATE USER kong; CREATE DATABASE kong OWNER kong;
 ~~~
+
+##### conf file path
+###### /etc/kong/kong.conf
+
+##### Start Kong
+###### kong start [-c /etc/kong/kong.conf] 
+
+
+##### Visit 
+curl -i http://localhost:8001/ 
+http://api.local.com
