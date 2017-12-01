@@ -14,6 +14,8 @@ COPY eureka.zip ./
 
 RUN unzip eureka.zip
 RUN rm eureka.zip
+RUN cp -fr eureka/* ./
+RUN rm -fr eureka/
 
 
 WORKDIR /usr/local/apache-tomcat-7.0.82/webapps/
