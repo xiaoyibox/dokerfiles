@@ -23,6 +23,6 @@ RUN rm node-v8.9.1-linux-x64.tar
 
 WORKDIR /usr/local/node891/
 
-RUN make && make install
+#RUN make && make install
 
-RUN node -v
+#RUN node -v
