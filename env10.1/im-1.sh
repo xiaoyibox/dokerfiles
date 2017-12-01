@@ -79,9 +79,6 @@ paths[16]="../src/nodejs/"
 images[17]="yi/centos7-eureka"
 paths[17]="../src/eureka/"
 
-images[18]="yi/centos7-eureka-server"
-paths[18]="../src/eureka/local/"
-
 
 
 
