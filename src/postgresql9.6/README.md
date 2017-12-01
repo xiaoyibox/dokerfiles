@@ -34,6 +34,10 @@ view : bash-4.2$ 输入 psql
 view : psql(9.6.6)
 view : Type "help" for help.
 
+#修改密码
+\password 
+ 
+
 #修改密码为123456,分号【;】是必须的
 view : postgres=# 输入 ： ALTER USER postgres WITH PASSWORD '123456';
 view : ALTER ROLE
