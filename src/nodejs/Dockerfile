@@ -23,6 +23,7 @@ RUN rm node-v8.9.1-linux-x64.tar
 
 WORKDIR /usr/local/node891/
 
-#RUN make && make install
+ENV NODE_HOME=/usr/local/node891
+ENV PATH=$NODE_HOME/bin:$PATH
 
-#RUN node -v
+RUN node -v
