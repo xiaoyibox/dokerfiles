@@ -19,7 +19,7 @@ RUN git --version
 # install gradle
 RUN wget https://services.gradle.org/distributions/gradle-4.3.1-bin.zip
 RUN mkdir gradle
-RUN unzip gradle-4.3.1-bin.zip ./gradle
+RUN unzip gradle-4.3.1-bin.zip -d ./gradle
 RUN cp -f ./gradle /usr/local/
 
 #ENV 
