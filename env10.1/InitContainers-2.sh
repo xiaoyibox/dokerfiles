@@ -35,6 +35,7 @@ containers[8]="env10_203_dubboadmin"
 containers[9]="env10_204_jenkins"
 containers[10]="env10_8_Kong01"
 containers[11]="env10_9_postgresql01"
+containers[12]="env10_100_nodejs01"
 
 
 ips[0]="run -d -p 80:80 --net=${bridgename} --ip=192.168.10.2 --restart=always --name ${containers[0]} yi/centos7-ssh-tengine-local"
@@ -49,6 +50,7 @@ ips[8]="run -d --net=${bridgename} --ip=192.168.10.203 --restart=always --name $
 ips[9]="run -d --net=${bridgename} --ip=192.168.10.204 --restart=always --name ${containers[9]} yi/centos7-jenkins"
 ips[10]="run -d -p 8001:22 --net=${bridgename} --ip=192.168.10.8 --restart=always --name ${containers[10]} yi/centos7-kong"
 ips[11]="run -d -p 5432:5432 --net=${bridgename} --ip=192.168.10.9 --privileged=true --name ${containers[11]} --restart=always yi/centos7-postgresql9.6 /usr/sbin/init"
+ips[11]="run -d --net=${bridgename} --ip=192.168.10.100 --name ${containers[12]} --restart=always yi/centos7-nodejs"
 
 if [[ "$active"x == "init"x ]]; then
 	#create net bridge

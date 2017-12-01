@@ -17,6 +17,7 @@ containers[8]="env10_203_dubboadmin"
 containers[9]="env10_204_jenkins"
 containers[10]="env10_8_Kong01"
 containers[11]="env10_9_postgresql01"
+containers[12]="env10_100_nodejs01"
 
 
 
@@ -72,6 +73,10 @@ elif [[ "$who"x == "postgresql"x ]] ; then
 	docker stop ${containers[11]}
 	docker rm ${containers[11]}
 	docker run -d -p 5432:5432 --net=${bridgename} --ip=192.168.10.9 --privileged=true --name ${containers[11]} --restart=always yi/centos7-postgresql9.6 /usr/sbin/init
+elif [[ "$who"x == "nodejs"x ]]; then
+	docker stop ${containers[12]}
+	docker rm ${containers[12]}
+	docker run -d --net=${bridgename} --ip=192.168.10.100 --restart=always --name ${containers[12]} yi/centos7-nodejs
 else
 	echo "Sorry,no any service."
 fi
