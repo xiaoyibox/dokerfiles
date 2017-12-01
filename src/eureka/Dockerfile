@@ -32,6 +32,6 @@ RUN gradle -v
 
 RUN git clone https://github.com/Netflix/eureka.git
 WORKDIR /home/work/apps/eureka/
-RUN ./gradlew clean build
+#RUN ./gradlew clean build
 WORKDIR /home/work/apps/eureka/eureka-server/build/libs/
 
