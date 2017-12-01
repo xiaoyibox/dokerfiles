@@ -1,5 +1,5 @@
 #
-# PostpreSQL-Server 9.6.6
+# PostgreSQL-Server 9.6.6
 #
 FROM yi/centos7-ssh
 MAINTAINER Yi.Ma <findlymw@gmail.com>

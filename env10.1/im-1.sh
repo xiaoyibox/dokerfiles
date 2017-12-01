@@ -70,8 +70,8 @@ paths[13]="../src/jenkins2.73.3/"
 images[14]="yi/centos7-kong"
 paths[14]="../src/kong0.11.2.el7.noarch/"
 
-images[15]="yi/centos7-postpresql9.6"
-paths[15]="../src/postpresql9.6"
+images[15]="yi/centos7-postgresql9.6"
+paths[15]="../src/postgresql9.6"
 
 
 
