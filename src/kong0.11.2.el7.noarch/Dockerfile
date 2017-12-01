@@ -24,8 +24,6 @@ RUN rpm -ivh kong-community-edition-0.11.2.el7.noarch.rpm
 
 COPY kong.conf /etc/kong/
 
-RUN kong migrations up [-c /etc/kong/kong.conf]
-
 COPY supervisord.conf /etc/supervisord.conf
 CMD ["/usr/bin/supervisord"]
 
