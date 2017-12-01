@@ -15,7 +15,9 @@ RUN xz -d node-v8.9.1-linux-x64.tar.xz
 
 RUN tar -xvf node-v8.9.1-linux-x64.tar
 
-RUN mv -f ./node-v8.9.1-linux-x64 ./usr/local/node891
+RUN mv -f ./node-v8.9.1-linux-x64 ./node891
+
+RUN mv -f ./node891 /usr/local/
 
 RUN rm node-v8.9.1-linux-x64.tar
 
