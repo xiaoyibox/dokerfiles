@@ -16,8 +16,6 @@ RUN yum install git -y
 
 RUN git --version
 
-RUN which git
-
 # install gradle
 RUN wget https://services.gradle.org/distributions/gradle-4.3.1-bin.zip
 RUN mkdir gradle
