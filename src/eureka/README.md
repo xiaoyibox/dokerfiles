@@ -1,5 +1,8 @@
 #项目说明
 
+## 【注意：】 进入系统编译，最后会报build failed，没关系，war包已经build完成了。
+
+
 ## 此项目仅仅是搭建Eureka的编译环境，并从github上下载Eureka项目进行编译。
 
 ### 第一次运行docker后，会自动进行第一次编译，如果需要获取新的代码重新编译
@@ -16,3 +19,4 @@ cd /home/work/apps/eureka
 ~~~
 scp filename root@ip:/path/path0
 ~~~
+
