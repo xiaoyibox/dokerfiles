@@ -76,6 +76,9 @@ paths[15]="../src/postgresql9.6/"
 images[16]="yi/centos7-nodejs"
 paths[16]="../src/nodejs/"
 
+images[17]="yi/centos7-eureka"
+paths[17]="../src/eureka/"
+
 
 
 
