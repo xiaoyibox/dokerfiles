@@ -67,8 +67,8 @@ paths[12]="../src/dubboadmin284/"
 images[13]="yi/centos7-jenkins"
 paths[13]="../src/jenkins2.73.3/"
 
-images[14]="yi/centos7-kong"
-paths[14]="../src/kong0.11.2.el7.noarch/"
+images[17]="yi/centos7-kong"
+paths[17]="../src/kong0.11.2.el7.noarch/"
 
 images[15]="yi/centos7-postgresql9.6"
 paths[15]="../src/postgresql9.6/"
@@ -76,8 +76,8 @@ paths[15]="../src/postgresql9.6/"
 images[16]="yi/centos7-nodejs"
 paths[16]="../src/nodejs/"
 
-images[17]="yi/centos7-eureka"
-paths[17]="../src/eureka/"
+images[14]="yi/centos7-eureka"
+paths[14]="../src/eureka/"
 
 
 
