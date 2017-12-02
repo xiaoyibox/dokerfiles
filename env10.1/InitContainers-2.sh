@@ -64,9 +64,9 @@ if [[ "$active"x == "init"x ]]; then
 	docker network create -d bridge --subnet $bridgeip $bridgename
 	echo "-------------------------Run All Containers--------------------------"
 	for index in "${!containers[@]}"; do
-		docker stop $containers[index]
-		docker rm $containers[index]
-		docker $ips[index]
+		docker stop ${containers[index]}
+		docker rm ${containers[index]}
+		docker ${ips[index]}
 	done
 else
 	echo "Sorry,[init] Only."

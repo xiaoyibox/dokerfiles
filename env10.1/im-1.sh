@@ -61,7 +61,7 @@ paths[10]="../src/mycat1.6/"
 images[11]="yi/centos7-tomcat7"
 paths[11]="../src/tomcat7/"
 
-images[12]="yi/centos7-dubboadmin254"
+images[12]="yi/centos7-dubboadmin284"
 paths[12]="../src/dubboadmin284/"
 
 images[13]="yi/centos7-jenkins"
