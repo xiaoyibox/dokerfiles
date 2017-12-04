@@ -19,4 +19,4 @@ RUN git clone https://github.com/pantsel/konga.git
 
 WORKDIR /home/work/apps/konga/
 
-RUN npm install
+#RUN npm install
