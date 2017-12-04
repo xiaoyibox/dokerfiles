@@ -19,7 +19,9 @@ yum install kong -y
 #####  Kong supports both PostgreSQL 9.4+ and Cassandra 3.x.x as its datastore.
 If you are using PostgreSQL, please provision a database and a user, ie:
 ~~~
-CREATE USER kong; CREATE DATABASE kong OWNER kong;
+CREATE USER kong; 
+
+CREATE DATABASE kong OWNER kong;
 ~~~
 
 ##### conf file path
