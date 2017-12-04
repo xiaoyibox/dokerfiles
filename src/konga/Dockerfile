@@ -12,6 +12,8 @@ RUN npm install -g gulp
 RUN npm install -g bower
 RUN npm install -g sails
 
+RUN yum install -y git
+
 RUN git clone https://github.com/pantsel/konga.git
 
 WORKDIR /home/work/apps/konga/
