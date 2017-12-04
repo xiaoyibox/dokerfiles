@@ -19,6 +19,7 @@ containers[10]="env10_8_Kong01"
 containers[11]="env10_9_postgresql01"
 containers[12]="env10_100_nodejs01"
 containers[13]="env10_205_eureka"
+containers[14]="env10_206_konga"
 
 
 
@@ -84,6 +85,10 @@ elif [[ "$who"x == "geteureka"x ]]; then
 	docker stop ${containers[13]}
 	docker rm ${containers[13]}
 	docker run -d --net=${bridgename} --ip=192.168.10.205 --restart=always --name ${containers[13]} yi/centos7-eureka
+elif [[ "$who"x == "konga"x ]]; then
+	docker stop ${containers[14]}
+	docker rm ${containers[14]}
+	docker run -d --net=${bridgename} --ip=192.168.10.206 --restart=always --name ${containers[14]} yi/centos7-konga
 else
 	echo "Sorry,no any service."
 fi

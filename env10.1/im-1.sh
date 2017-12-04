@@ -79,6 +79,9 @@ paths[16]="../src/nodejs/"
 images[14]="yi/centos7-eureka"
 paths[14]="../src/eureka/"
 
+images[15]="yi/centos7-konga"
+paths[15]="../src/konga/"
+
 
 
 
