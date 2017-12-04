@@ -12,6 +12,7 @@ RUN npm install -g gulp
 RUN npm install -g bower
 RUN npm install -g sails
 RUN npm -g --unsafe-perm install node-sass
+RUN npm install -g node-gyp
 
 RUN yum install -y git
 
