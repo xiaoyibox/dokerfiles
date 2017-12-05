@@ -54,7 +54,7 @@ ips[10]="run -d -p 8001:22 --net=${bridgename} --ip=192.168.10.8 --restart=alway
 ips[11]="run -d -p 5432:5432 --net=${bridgename} --ip=192.168.10.9 --privileged=true --name ${containers[11]} --restart=always yi/centos7-postgresql9.6 /usr/sbin/init"
 ips[12]="run -d --net=${bridgename} --ip=192.168.10.100 --name ${containers[12]} --restart=always yi/centos7-nodejs"
 ips[13]="run -d --net=${bridgename} --ip=192.168.10.205 --name ${containers[13]} --restart=always yi/centos7-eureka"
-ips[14]="run -d --net=${bridgename} --ip=192.168.10.206 --name ${containers[14]} --restart=always yi/centos7-konga"
+ips[14]="run -d -p 1337:1337 -p 8001:8001 --net=${bridgename} --ip=192.168.10.206 --name ${containers[14]} --restart=always -e 'NODE_ENV=prodection' yi/centos7-konga"
 
 
 if [[ "$active"x == "init"x ]]; then
