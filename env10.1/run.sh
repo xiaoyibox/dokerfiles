@@ -88,7 +88,7 @@ elif [[ "$who"x == "geteureka"x ]]; then
 elif [[ "$who"x == "konga"x ]]; then
 	docker stop ${containers[14]}
 	docker rm ${containers[14]}
-	docker run -d -p 1337:1337 -p 8001:8001 --net=${bridgename} --ip=192.168.10.206 --name ${containers[14]} --restart=always -e "NODE_ENV=prodection" yi/centos7-konga
+	docker run -d -p 1337:1337 --net=${bridgename} --ip=192.168.10.206 --name ${containers[14]} --restart=always -e "NODE_ENV=prodection" yi/centos7-konga
 else
 	echo "Sorry,no any service."
 fi
