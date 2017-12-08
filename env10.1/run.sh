@@ -93,7 +93,7 @@ elif [[ "$who"x == "konga"x ]]; then
 elif [[ "$who"x == "nexus"x ]]; then
 	docker stop ${containers[15]}
 	docker rm ${containers[15]}
-	docker run -d --net=${bridgename} --ip=192.168.10.207 --name ${containers[15]} --restart=always yi/centos7-nexus
+	docker run -d -p 8081:8081 --net=${bridgename} --ip=192.168.10.207 --name ${containers[15]} --restart=always yi/centos7-nexus
 else
 	echo "Sorry,no any service."
 fi
