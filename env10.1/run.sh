@@ -20,6 +20,7 @@ containers[11]="env10_9_postgresql01"
 containers[12]="env10_100_nodejs01"
 containers[13]="env10_205_eureka"
 containers[14]="env10_206_konga"
+containers[15]="env10_207_nexus"
 
 
 
@@ -89,6 +90,10 @@ elif [[ "$who"x == "konga"x ]]; then
 	docker stop ${containers[14]}
 	docker rm ${containers[14]}
 	docker run -d --net=${bridgename} --ip=192.168.10.206 --name ${containers[14]} --restart=always -e "NODE_ENV=prodection" yi/centos7-konga
+elif [[ "$who"x == "nexus"x ]]; then
+	docker stop ${containers[15]}
+	docker rm ${containers[15]}
+	docker run -d --net=${bridgename} --ip=192.168.10.207 --name ${containers[15]} --restart=always yi/centos7-nexus
 else
 	echo "Sorry,no any service."
 fi

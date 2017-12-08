@@ -82,6 +82,9 @@ paths[14]="../src/eureka/"
 images[15]="yi/centos7-konga"
 paths[15]="../src/konga/"
 
+images[16]="yi/centos7-nexus"
+paths[16]="../src/nexus2.11.2-03/"
+
 
 
 
