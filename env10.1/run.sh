@@ -45,7 +45,7 @@ elif [[ "$who"x == "mysql"x ]]; then
 elif [[ "$who"x == "zookeeper"x ]]; then
 	docker stop ${containers[3]}
 	docker rm ${containers[3]}
-	docker run -d -p 2181:2181 --net=${bridgename} --ip=192.168.10.5 --restart=always --name ${containers[3]} yi/centos7-zookeeper3.4.11
+	docker run -d -p 2181:2181 -p 2888:2888 -p 3888:3888 -p 20880:20880 --net=${bridgename} --ip=192.168.10.5 --restart=always --name ${containers[3]} yi/centos7-zookeeper3.4.11
 elif [[ "$who"x == "mq"x ]]; then
 	docker stop ${containers[4]}
 	docker rm ${containers[4]}

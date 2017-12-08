@@ -30,6 +30,7 @@ ENV PATH=$ZOOKEEPER_HOME/bin:$PATH
 EXPOSE 2888
 EXPOSE 3888
 EXPOSE 2181
+EXPOSE 20880
 
 COPY supervisord.conf /etc/supervisord.conf
 CMD ["/usr/bin/supervisord"]
