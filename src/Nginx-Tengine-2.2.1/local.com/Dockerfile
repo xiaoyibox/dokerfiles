@@ -36,4 +36,6 @@ EXPOSE 22
 
 
 #Run nginx engine
-CMD ["/usr/local/nginx/sbin/nginx"]
+#CMD ["/usr/local/nginx/sbin/nginx"]
+COPY supervisord.conf /etc/supervisord.conf
+CMD ["/usr/bin/supervisord"]
