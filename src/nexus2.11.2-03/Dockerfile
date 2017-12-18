@@ -14,7 +14,7 @@ RUN mkdir /usr/local/nexus
 RUN tar -zxvf nexus-2.11.2-03-bundle.tar.gz  -C /usr/local/nexus/
 WORKDIR /usr/local/nexus/
 RUN rm /home/work/apps/nexus-2.11.2-03-bundle.tar.gz
-
+COPY nexus /usr/local/nexus/nexus-2.11.2-03/bin/nexus
 EXPOSE 8081
 COPY supervisord.conf /etc/supervisord.conf
 CMD ["/usr/bin/supervisord"]
