@@ -65,7 +65,7 @@ elif [[ "$who"x == "jira"x ]]; then
 elif [[ "$who"x == "dubboadmin"x ]]; then
 	docker stop ${containers[8]}
 	docker rm ${containers[8]}
-	docker run -d -p 8080:8080 --net=${bridgename} --ip=192.168.10.203 --restart=always --name ${containers[8]} yi/centos7-dubboadmin284
+	docker run -d -p 9090:8080 --net=${bridgename} --ip=192.168.10.203 --restart=always --name ${containers[8]} yi/centos7-dubboadmin284
 elif [[ "$who"x == "jenkins"x ]]; then
 	docker stop ${containers[9]}
 	docker rm ${containers[9]}
