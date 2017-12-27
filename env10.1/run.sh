@@ -21,6 +21,8 @@ containers[12]="env10_100_nodejs01"
 containers[13]="env10_205_eureka"
 containers[14]="env10_206_konga"
 containers[15]="env10_207_nexus"
+containers[16]="env10_210_kafka"
+
 
 
 
@@ -94,6 +96,10 @@ elif [[ "$who"x == "nexus"x ]]; then
 	docker stop ${containers[15]}
 	docker rm ${containers[15]}
 	docker run -d -p 8081:8081 --net=${bridgename} --ip=192.168.10.207 --name ${containers[15]} --restart=always yi/centos7-nexus
+elif [[ "$who"x == "kafka"x ]]; then
+	docker stop ${containers[16]}
+	docker rm ${containers[16]}
+	docker run -d --net=${bridgename} --ip=192.168.10.210 --name ${containers[16]} --restart=always yi/centos7-kafka
 else
 	echo "Sorry,no any service."
 fi

@@ -85,6 +85,9 @@ paths[15]="../src/konga/"
 images[16]="yi/centos7-nexus"
 paths[16]="../src/nexus2.11.2-03/"
 
+images[17]="yi/centos7-kafka"
+paths[17]="../src/kafka/"
+
 
 
 

@@ -86,6 +86,7 @@ paths[15]="../src/konga/"
 
 
 
+
 if [ "$who"x == ""x ] || [ "$del"x == ""x ] ; then
 	echo "Sorry, you must input who and del..."
 else
