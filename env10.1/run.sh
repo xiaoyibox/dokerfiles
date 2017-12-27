@@ -99,7 +99,7 @@ elif [[ "$who"x == "nexus"x ]]; then
 elif [[ "$who"x == "kafka"x ]]; then
 	docker stop ${containers[16]}
 	docker rm ${containers[16]}
-	docker run -d --net=${bridgename} --ip=192.168.10.210 --name ${containers[16]} --restart=always yi/centos7-kafka
+	docker run -d -p 9999:22 --net=${bridgename} --ip=192.168.10.210 --name ${containers[16]} --restart=always yi/centos7-kafka
 else
 	echo "Sorry,no any service."
 fi
